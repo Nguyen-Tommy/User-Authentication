@@ -16,7 +16,6 @@ function initialize(passport, getUserByEmail, getUserById) {
         if (user == null) {
             return done(null, false, { message: 'No user with that email' });
         }
-
         try {
 
             // Compare user input with user password 
