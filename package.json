@@ -1,7 +1,7 @@
 {
-  "name": "user-authenication",
+  "name": "user-authentication",
   "version": "0.0.0",
-  "description": "User Authenication",
+  "description": "User Authentication",
   "main": "server.js",
   "author": {
     "name": ""
