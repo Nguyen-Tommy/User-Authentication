@@ -1,5 +1,5 @@
 // Passport configuration
-// Authenicate user's inputs locally
+// Authenticate user's inputs locally
 
 'use strict';
 
@@ -7,7 +7,7 @@
 const LocalStrategy = require('passport-local').Strategy
 const bcrypt = require('bcrypt');
 
-// Initialize authenication
+// Initialize authentication
 function initialize(passport, getUserByEmail, getUserById) {
     const authenticateUser = async (email, password, done) => {
         const user = getUserByEmail(email);
