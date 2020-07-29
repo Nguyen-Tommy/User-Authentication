@@ -1,4 +1,4 @@
-// User Authenication
+// User Authentication
 // Local web server application, hash passwords with bcrypt, authenicate using passport, stores users in an array
 
 'use strict';
