@@ -1,5 +1,5 @@
 // User Authentication
-// Local web server application, hash passwords with bcrypt, authenicate using passport, stores users in an array
+// Local web server application, hash passwords with bcrypt, authenticate using passport, stores users in an array
 
 'use strict';
 
@@ -41,7 +41,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(methodOverride('_method'));
 
-// Render index page with user name if authenicated 
+// Render index page with user name if authenticated 
 app.get('/', checkAuthenticated, (req, res) => {
     res.render('index.ejs', { name: req.user.name })
 });
@@ -51,7 +51,7 @@ app.get('/login', (req, res) => {
     res.render('login.ejs');
 });
 
-// Login page authenication response
+// Login page authentication response
 app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/login',
@@ -89,7 +89,7 @@ app.delete('/logout', (req, res) => {
     res.redirect('/login');
 });
 
-// Check if user is authenicated
+// Check if user is authenticated
 function checkAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
@@ -97,7 +97,7 @@ function checkAuthenticated(req, res, next) {
     res.redirect('/login');
 }
 
-// Check if user is not authenicated
+// Check if user is not authenticated
 function checkNotAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
         return res.redirect('/');
