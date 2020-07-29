@@ -1,5 +1,5 @@
 // User Authenication
-// Local web server application, hash passwords with bcrypt, store users in mySQL database
+// Local web server application, hash passwords with bcrypt, authenicate using passport, stores users in an array
 
 'use strict';
 
